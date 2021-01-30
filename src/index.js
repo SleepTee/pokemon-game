@@ -1,11 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Header from "./components/Header/Header";
+import Layout from "./components/Layout/Layout";
+import Footer from "./components/Footer/Footer";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+
+    const App = () => {
+        return (
+            <React.Fragment>
+                <Header />
+                <Layout />
+                <Layout />
+                <Layout />
+                <Footer />
+            </React.Fragment>
+        )
+    }
+
+ReactDOM.render(<App/>, document.getElementById('root'));
