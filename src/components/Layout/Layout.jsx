@@ -1,18 +1,20 @@
 import s from "./Layout.module.css"
 
-const Layout = (id , tittle, descr, urlBg, colorBg) => {
+const Layout = ({ urlBg , colorBg, id , title, descr }) => {
+    const StyleRoot = urlBg ? {backgroundImage: urlBg } : {backgroundColor: colorBg }
     return (
-        <section className={s.root} id={this.props.id}>
+        <section className={s.root} style={StyleRoot}
+                 >
             <div className={s.wrapper}>
                 <article>
                     <div className={s.title}>
                         <h3>
-                            {this.props.title}</h3>
+                            {title} </h3>
                         <span className={s.separator}></span>
                     </div>
-                    <div className={s.desc}>
+                    <div className={s.desc.full}>
                         <p>
-                            {this.props.desc}</p>
+                            {descr}   </p>
                     </div>
                 </article>
             </div>
